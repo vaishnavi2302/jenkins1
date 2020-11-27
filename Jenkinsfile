@@ -15,5 +15,12 @@ pipeline {
 				bat """ java Test1"""
 				}
 			}
+			
+		stage ("docker") {
+			steps {
+				echo "Running Docker"
+				bat """ docker run app-1 """
+				}
+			}
 		}
 	}
